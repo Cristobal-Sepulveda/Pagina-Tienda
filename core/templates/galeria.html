@@ -2,30 +2,19 @@
 <html>
 <head>
     <title>Galeria de productos</title>
+    <!-- cargando carpeta static -->
+    {% load static %}
     <!--HTML5-->
     <meta charset="utf-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
 
-    <!--Bootstrap-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link href="../../bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet">
-
-    <!--Jquery-->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
-            crossorigin="anonymous">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
-            crossorigin="anonymous">
-    </script>  
-
-    <!--CSS-->
-    <link href="../styles/style.css" rel="stylesheet" type="text/css">
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- GoogleFonts: ROBOTO-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,10 +60,7 @@
             })
         })
     </script>
-    
-    <!--Javascript: IMPORTANDO FUNCIONES.JS-->
-    <script src="../../utils/funciones.js"></script>
-    
+       
     <!--JAVASCRIPT: FUNCIONES QUE DEBEN SER CARGADAS DESDE AQUI-->
     <script>
         const dibujadoraDeTablaEnCarrito = () =>{
@@ -121,7 +107,7 @@
           
         <!-- logo -->
         <a class="navbar-brand" href="#" >
-            <img id="logo" src="../../img/logo.jpg" width="30" height="30" alt="" >
+            <img id="logo" src="{% static 'img/logo.jpg' %}" width="30" height="30" alt="" >
         </a>
             
         <!-- enlaces -->
@@ -165,7 +151,7 @@
                 <p id="productoNombre1">Producto 1</p>
             </div>    
             <div class="precio-col-features">
-                <img src="../../img/repizas.jpg"/>
+                <img src="{% static 'img/repizas.jpg' %}"/>
                 <p> Producto 1</p>
                 <button class="botonAleatorio" data-dismiss="modal" onclick="agregarAlCarrito(productoNombre1, productoPrecio1)">Añadir al carrito</button>
             </div>
@@ -177,7 +163,7 @@
                 <p id="productoNombre2">Repisa 2</p>
             </div>    
             <div class="precio-col-features">
-                <img src="../../img/repizas.jpg"/>
+                <img src="{% static 'img/repizas.jpg' %}"/>
                 <p > Repisa 2</p>
                 <button class="botonAleatorio" data-dismiss="modal" onclick="agregarAlCarrito(productoNombre2, productoPrecio2)" >Añadir al carrito</button>
             </div>
@@ -190,7 +176,7 @@
                 <p id="productoNombre3">Repisa 3</p>
             </div>    
             <div class="precio-col-features">
-                <img src="../../img/repizas.jpg"/>
+                <img src="{% static 'img/repizas.jpg' %}"/>
                 <p> Repisa 3</p>
                 <button class="botonAleatorio" data-dismiss="modal" onclick="agregarAlCarrito(productoNombre3, productoPrecio3)">Añadir al carrito</button>
               </div>
@@ -202,7 +188,7 @@
                 <p id="productoNombre4">Repisa 4</p>
             </div>    
             <div class="precio-col-features">
-                <img src="../../img/repizas.jpg"/>
+                <img src="{% static 'img/repizas.jpg' %}"/>
                 <p> Repisa 4</p>
                 <button class="botonAleatorio" data-dismiss="modal" onclick="agregarAlCarrito(productoNombre4, productoPrecio4)">Añadir al carrito</button>
             </div>
@@ -215,7 +201,7 @@
                 <p id="productoNombre5">Repisa 5</p>
             </div>    
             <div class="precio-col-features">
-                <img src="../../img/repizas.jpg"/>
+                <img src="{% static 'img/repizas.jpg' %}"/>
                 <p> Repisa 5</p>
                 <button class="botonAleatorio" data-dismiss="modal" onclick="agregarAlCarrito(productoNombre5, productoPrecio5)">Añadir al carrito</button>
             </div>
@@ -228,7 +214,7 @@
                 <p id="productoNombre6">Repisa Bamboo multiuso</p>
             </div>    
             <div class="precio-col-features">
-                <img src="../../img/rack-bamboo-multiuso.jpg"/>
+                <img src="{% static 'img/rack-bamboo-multiuso.jpg' %}"/>
                 <p> Repisa 6</p>
                 <button class="botonAleatorio" data-dismiss="modal" onclick="agregarAlCarrito(productoNombre6, productoPrecio6)">Añadir al carrito</button>
             </div>
@@ -241,7 +227,7 @@
                 <p id="productoNombre7">Repisa exclusive</p>
             </div>    
             <div class="precio-col-features">
-                <img src="../../img/repizas.jpg"/>
+                <img src="{% static 'img/repizas.jpg' %}"/>
                 <p> Repisa 7</p>
                 <button class="botonAleatorio" data-dismiss="modal" onclick="agregarAlCarrito(productoNombre7, productoPrecio7)">Añadir al carrito</button>
             </div>
@@ -254,7 +240,7 @@
                 <p id="productoNombre8">Repisa elite</p>
             </div>    
             <div class="precio-col-features">
-                <img src="../../img/repisaelite.jpeg" width="280px" height="183px"/>
+                <img src="{% static 'img/repisaelite.jpeg' %}"/> width="280px" height="183px"/>
                 <p> Repisa 8</p>
                 <button class="botonAleatorio" data-dismiss="modal" onclick="agregarAlCarrito(productoNombre8, productoPrecio8)">Añadir al carrito</button>
             </div>
@@ -264,7 +250,7 @@
     </div>
     
     <!-- Footer-->
-    <footer >
+    <footer class="bg-dark text-center text-white">
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             Cristóbal Ignacio Sepúlveda Silva © 2022 Copyright: Derechos Reservados
@@ -375,7 +361,7 @@
  
                     </table>
                     </div>
-                    <img id = "imagenCarrito" src="../../img/logo.jpg" style="width: 80%; height: 350px;border-radius: 10px;" class="center" onmouseenter="desapareceImagen(document)" onmouseleave="reapareceImagen(document)"/>
+                    <img id = "imagenCarrito" src="{% static 'img/logo.jpg' %}" style="width: 80%; height: 350px;border-radius: 10px;" class="center" onmouseenter="desapareceImagen(document)" onmouseleave="reapareceImagen(document)"/>
                     <!--Botones del carrito-->
                     <div class="botonesModal">
                         <button class="botonAleatorio" onclick="irATransbank()">Pagar</button>
