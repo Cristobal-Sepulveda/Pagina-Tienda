@@ -2,6 +2,8 @@ from django.urls import path
 from .views import index, galeria, somos, contacto, modal, productos, login, form_crear_producto, form_mod_producto, form_del_producto, clientes, form_crear_cliente, form_mod_cliente, form_del_cliente
 from django.contrib.staticfiles.storage import staticfiles_storage
 from django.views.generic.base import RedirectView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns=[
     path('', index, name='index'),
@@ -19,3 +21,6 @@ urlpatterns=[
     path("form_mod_cliente/<id>", form_mod_cliente, name='form_mod_cliente'),
     path("form_del_cliente/<id>", form_del_cliente, name='form_del_cliente')
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

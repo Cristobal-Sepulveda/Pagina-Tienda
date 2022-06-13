@@ -50,6 +50,9 @@
             descripcion: {
               required: true,
             },
+            imagen: {
+              required: true,
+            },
           },
           messages: {
             nombre: {
@@ -60,6 +63,9 @@
             },
             descripcion: {
               required: "Ingrese descripcion del producto",
+            },
+            imagen: {
+              required: "Ingrese imagen del producto",
             },
           },
         });
@@ -72,12 +78,13 @@
       <h2>Creando Producto</h2>
 
       <div class="row">
-        <form method="POST" action="#" id="formulario">
+        <form
+          method="POST"
+          action="#"
+          id="formulario"
+          enctype="multipart/form-data"
+        >
           {% csrf_token %}
-
-          <div class="form-group">
-            {{ producto_form.idProducto.label}} {{ producto_form.idProducto}}
-          </div>
 
           <div class="form-group">
             {{ producto_form.nombre.label}} {{ producto_form.nombre}}
@@ -89,10 +96,14 @@
           <div class="form-group">
             {{ producto_form.descripcion.label}} {{ producto_form.descripcion}}
           </div>
+          <div class="form-group">
+            {{ producto_form.imagen.label}}{{ producto_form.imagen}}
+          </div>
 
           <br /><br />
           <input type="submit" class="btn btn-primary" value="Enviar" />
           <input type="reset" class="btn btn-danger" value="Limpiar" />
+          <a href="{% url 'productos' %}" class="btn btn-success">Volver</a>
         </form>
       </div>
     </div>

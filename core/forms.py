@@ -10,36 +10,42 @@ class ProductoForm(forms.ModelForm):
 
     class Meta: 
         model= Producto
-        fields = ['nombre', 'precio', 'descripcion']
+        fields = ['nombre', 'precio', 'descripcion', 'imagen']
         labels ={
             'nombre': 'Nombre', 
             'precio': 'precio', 
             'descripcion': 'descripcion',
+            'imagen': 'imagen'
         }
-        widgets={
-            'nombre': forms.TextInput(
-                attrs={
-                    'class': 'form-control', 
-                    'placeholder': 'Ingrese nombre', 
-                    'id': 'nombre'
-                }
-            ), 
-            'precio': forms.TextInput(
-                attrs={
-                    'class': 'form-control', 
-                    'placeholder': 'Ingrese precio', 
-                    'id': 'precio'
-                }
-            ), 
-            'descripcion': forms.TextInput(
-                attrs={
-                    'class': 'form-control',
-                    'placeholder': 'Ingrese descripcion',
-                    'id': 'descripcion',
-                }
-            )
+        # widgets={
+        #     'nombre': forms.TextInput(
+        #         attrs={
+        #             'class': 'form-control', 
+        #             'placeholder': 'Ingrese nombre', 
+        #             'id': 'nombre'
+        #         }
+        #     ), 
+        #     'precio': forms.TextInput(
+        #         attrs={
+        #             'class': 'form-control', 
+        #             'placeholder': 'Ingrese precio', 
+        #             'id': 'precio'
+        #         }
+        #     ), 
+        #     'descripcion': forms.TextInput(
+        #         attrs={
+        #             'class': 'form-control',
+        #             'placeholder': 'Ingrese descripcion',
+        #             'id': 'descripcion',
+        #         }
+        #     ),
+        #     'imagen': forms.ImageField(
+        #         attrs={
+        #             'upload_to': '/images'
+        #         }
+        #     )
 
-        }
+        # }
 
 class ClienteForm(forms.ModelForm):
 
