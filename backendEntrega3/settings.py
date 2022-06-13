@@ -38,7 +38,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'crispy_forms',
 ]
+
+#parametro que establece la ruta de inicio post inicio de sesion
+LOGIN_REDIRECT_URL='/'
+#parametro que establece la ruta de inicio post logeo de sesion
+LOGOUT_REDIRECT_URL='/'
+
+#esto le agrega bootstrap4 al template de crispy
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
