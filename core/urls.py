@@ -11,7 +11,6 @@ urlpatterns=[
     path("somos/", somos, name="somos"),
     path("contacto/", contacto, name="contacto"),
     path("modal/", modal, name="modal"),
-    path("login/", login, name='login'),
     path("productos/", productos, name="productos"),
     path("form_crear_producto/", form_crear_producto, name='form_crear_producto'),
     path("form_mod_producto/<id>", form_mod_producto, name='form_mod_producto'),

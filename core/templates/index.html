@@ -201,10 +201,12 @@
         </div>
       </div>
       <div>
-        <a href="{% url 'index' %}" class="btn btn-primary">Cerrar Sesión</a>
+        <a href="{% url 'logout' %}" class="btn btn-primary">Cerrar Sesión</a>
       </div>
       {% else %}
-      <a href="{% url 'login' %}" class="btn btn-primary">Iniciar Sesión</a>
+      <div>
+        <a href="{% url 'login' %}" class="btn btn-primary">Iniciar Sesión</a>
+      </div>
       {% endif %}
 
       <!-- Img mas Texto-->
